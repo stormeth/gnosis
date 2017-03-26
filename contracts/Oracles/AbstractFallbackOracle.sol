@@ -1,3 +1,4 @@
+pragma solidity ^0.4.0;
 /// @title Abstract oracle contract - Functions to be implemented by oracles.
 contract FallbackOracle {
     function isValidSigner(bytes32 descriptionHash, address signer) returns (bool isValid);

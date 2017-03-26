@@ -19,7 +19,7 @@ contract MarketCrowdfunding {
     /*
      *  External contracts
      */
-    EventFactory constant eventFactory = EventFactory({{EventFactory}});
+    EventFactory constant eventFactory = EventFactory(EventFactory);
 
     /*
      *  Data structures

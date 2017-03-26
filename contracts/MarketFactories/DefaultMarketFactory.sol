@@ -13,7 +13,7 @@ contract DefaultMarketFactory is MarketFactory {
     /*
      *  External contracts
      */
-    EventFactory constant eventFactory = EventFactory({{EventFactory}});
+    EventFactory constant eventFactory = EventFactory(EventFactory);
 
     /*
      *  Constants

@@ -1,3 +1,4 @@
+pragma solidity ^0.4.0;
 /// @title Abstract markets contract - Functions to be implemented by markets contracts.
 contract MarketFactory {
     function createMarket(bytes32 eventHash, uint fee, uint initialFunding, address marketMakerAddress) returns (bytes32 marketHash);

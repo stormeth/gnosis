@@ -1,3 +1,4 @@
+pragma solidity ^0.4.0;
 /// @title Abstract DAO contract - Functions to be implemented by DAO contracts.
 contract DAO {
     function calcBaseFee(address sender, address token, uint tokenCount) returns (uint fee);

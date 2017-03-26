@@ -12,8 +12,8 @@ contract HunchGameMarketFactory is DefaultMarketFactory {
     /*
      *  External contracts
      */
-    EventFactory constant eventFactory = EventFactory({{EventFactory}});
-    HunchGameToken constant hunchGameToken = HunchGameToken({{HunchGameToken}});
+    EventFactory constant eventFactory = EventFactory(EventFactory);
+    HunchGameToken constant hunchGameToken = HunchGameToken(HunchGameToken);
 
     /*
      *  Constants

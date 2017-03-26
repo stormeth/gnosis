@@ -1,3 +1,4 @@
+pragma solidity ^0.4.0;
 /// @title Abstract oracle contract - Functions to be implemented by oracles.
 contract Oracle {
     function registerEvent(bytes32[] data) returns (bytes32 eventIdentifier);

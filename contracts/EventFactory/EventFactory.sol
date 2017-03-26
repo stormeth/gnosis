@@ -2,7 +2,7 @@ pragma solidity ^0.4.0;
 //import "./../Oracles/AbstractOracle.sol";
 //import "./../DAO/AbstractDAO.sol";
 import "./../Utils/Lockable.sol";
-import "./../EventFactory/OutcomeToken.sol";
+import "./OutcomeToken.sol";
 
 
 /// @title Event factory contract - Event management and share token storage.
@@ -18,7 +18,7 @@ contract EventFactory is Lockable {
     /*
      *  External contracts
      */
-    DAO dao = DAO({{DAO}});
+    DAO dao = DAO(DAO);
 
     /*
      *  Constants

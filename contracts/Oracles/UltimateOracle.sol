@@ -21,7 +21,7 @@ contract UltimateOracle is Oracle {
     string constant public name = "Ultimate Oracle";
 
     // Token used to pay fees
-    Token constant token = Token({{EtherToken}});
+    Token constant token = Token(EtherToken);
 
     /*
      *  Data structures

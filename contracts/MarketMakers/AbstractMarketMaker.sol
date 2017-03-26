@@ -1,3 +1,4 @@
+pragma solidity ^0.4.0;
 /// @title Abstract market maker contract - Functions to be implemented by market maker contracts.
 contract MarketMaker {
     function calcCostsBuying(bytes32 marketHash, uint initialFunding, uint[] shareDistribution, uint8 outcomeIndex, uint shareCount) constant returns (uint costs);

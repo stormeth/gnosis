@@ -15,7 +15,7 @@ contract usingOraclize {
     /*
      *  External contracts
      */
-    Oraclize constant oraclize = Oraclize({{Oraclize}});
+    Oraclize constant oraclize = Oraclize(Oraclize);
 
     /// @dev Fake setting of TLSNotary proof.
     /// @param proof TLSNotary proof.

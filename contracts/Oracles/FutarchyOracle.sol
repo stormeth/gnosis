@@ -13,10 +13,10 @@ contract FutarchyOracle is Oracle {
     /*
      *  External contracts
      */
-    EventFactory constant eventFactory = EventFactory({{EventFactory}});
-    MarketFactory constant marketFactory = MarketFactory({{DefaultMarketFactory}});
-    Token constant etherToken = Token({{EtherToken}});
-    address constant marketMaker = {{LMSRMarketMaker}};
+    EventFactory constant eventFactory = EventFactory(EventFactory);
+    MarketFactory constant marketFactory = MarketFactory(DefaultMarketFactory);
+    Token constant etherToken = Token(EtherToken);
+    address constant marketMaker = LMSRMarketMaker;
 
     /*
      *  Constants
@@ -65,7 +65,7 @@ contract FutarchyOracle is Oracle {
     )
         public
     {
-        macro: $futarchyDecision = futarchyDecisions[proposalHash];
+        $futarchyDecision = futarchyDecisions[proposalHash];
         if ($futarchyDecision.decisionTime > 0 || now >= decisionTime) {
             // Futarchy decision exists already or decision time is in the past
             throw;
@@ -161,7 +161,7 @@ contract FutarchyOracle is Oracle {
     function setOutcome(bytes32 proposalHash, bytes32[] data)
         external
     {
-        macro: $futarchyDecision = futarchyDecisions[proposalHash];
+        $futarchyDecision = futarchyDecisions[proposalHash];
         if (now < $futarchyDecision.decisionTime || $futarchyDecision.isWinningOutcomeSet) {
             // Decision time is not reached yet or outcome was set already
             throw;
@@ -228,7 +228,7 @@ contract FutarchyOracle is Oracle {
         // Calculate array size
         uint arrPos = 0;
         for (uint i=0; i<proposalHashes.length; i++) {
-            macro: $futarchyDecision = futarchyDecisions[proposalHashes[i]];
+            $futarchyDecision = futarchyDecisions[proposalHashes[i]];
             if ($futarchyDecision.decisionTime > 0) {
                 arrPos += 6;
             }
@@ -237,7 +237,7 @@ contract FutarchyOracle is Oracle {
         allFutarchyDecisions = new uint[](arrPos);
         arrPos = 0;
         for (i=0; i<proposalHashes.length; i++) {
-            macro: $futarchyDecision = futarchyDecisions[proposalHashes[i]];
+            $futarchyDecision = futarchyDecisions[proposalHashes[i]];
             allFutarchyDecisions[arrPos] = uint(proposalHashes[i]);
             allFutarchyDecisions[arrPos + 1] = uint($futarchyDecision.marketHash1);
             allFutarchyDecisions[arrPos + 2] = uint($futarchyDecision.marketHash2);

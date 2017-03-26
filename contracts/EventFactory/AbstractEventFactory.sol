@@ -1,3 +1,4 @@
+pragma solidity ^0.4.0;
 /// @title Abstract event factory contract - Functions to be implemented by events contracts.
 contract EventFactory {
     function createEvent(bytes32 descriptionHash, bool isRanged, int lowerBound, int upperBound, uint8 outcomeCount, address oracleAddress, address tokenAddress, bytes32[] data) returns (bytes32 eventHash);
